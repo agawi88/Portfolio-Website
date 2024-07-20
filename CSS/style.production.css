@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: #E6E6FA;
+    background-color: #ebebf7;
     color: #2b2b2b;
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -43,7 +43,7 @@ a {
 }
 
 a:visited {
-    color: #637864;
+    color: #79907a;
 }
 
 a:hover {
@@ -177,33 +177,21 @@ button {
     transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 }
 
-.default_button {
-    width: 120px;
-    margin: 5px;
-}
-
-.secondary_button {
-    background-color: #d8bfd8;
-    color: indigo;
-    width: 120px;
-    margin: 5px;
-
-}
-
+.default_button,
 .tertiary_button {
-    background-color: #9370db;
-    color: #2e0051;
     width: 120px;
     margin: 5px;
 }
 
+.secondary_button,
 .additional_button {
-    background-color: #92ac92;
+    background-color: #c3c3e3;
+    /* background-color: #d8bfd8; */
     color: indigo;
     width: 120px;
     margin: 5px;
-}
 
+}
 .button_form {
     margin-left: 80px;
 }
@@ -309,7 +297,7 @@ ul.list_centered {
     display: flex;
     width: 100%;
     padding: 20px 20px;
-    height: 6rem;
+    height: 8rem;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -340,7 +328,8 @@ ul.list_centered {
 }
 
 .page_logo {
-    border-radius: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(34, 60, 80, .16);
 }
 
 /* start grid fallback */
@@ -363,7 +352,7 @@ ul.list_centered {
     }
 
     .grid_item {
-        background-color: #d4d1d4;
+        background-color: #cad7ca50;
         width: auto;
         min-width: auto;
         margin: 0;
@@ -396,7 +385,7 @@ ul.list_centered {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    background-color: #E6E6FA;
+    background-color: #d8e9d8;
     list-style: none;
     border: dotted 3px #637864;
     margin-left: 350px;
@@ -443,7 +432,7 @@ ul.list_centered {
     flex-flow: row wrap;
     margin-bottom: 50px;
     padding: 8px;
-    background-color: #d8e9d8;
+    background-color: #cad7ca50;
     opacity: 2.5
 }
 
