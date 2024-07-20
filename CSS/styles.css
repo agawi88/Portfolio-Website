@@ -9,7 +9,7 @@ tertiary color (green) #637864;
 additional color (melon): f9b5ac;
  */
 :root {
-    --primary-color: #E6E6FA;
+    --primary-color: #ECF8F8;
     --secondary-color: #dfcce9c0;
     --tertiary-color: rgba(70, 38, 93, 0.923);
     --light-indigo: #6f26a3;

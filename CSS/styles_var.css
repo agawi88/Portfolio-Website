@@ -9,20 +9,20 @@ tertiary color (green) #637864;
 additional color (melon): f9b5ac;
  */
 :root {
-    --primary-color: #E6E6FA;
-    --secondary-color: #dfcce9c0;
-    --tertiary-color: rgba(70, 38, 93, 0.923);
-    --light-indigo: #6f26a3;
-    --dark-violet: #654F6F;
-    --button-violet: #5C5D8D;
-    --buttonpink: #c6afc6;
+    --primary-color: #faf9f6d0;
+    --secondary-color: #BDC3CB;
+    --tertiary-color: #AD9787;
+    --link: #103155;
+    --dusty-rose: #CCAFA5;
+    --sand: #DCD2CC;
+    --ivory: #EDE7DC;
     --dark-grey: #2b2b2b;
-    --dark-green: #2b342b;
-    --green: #728973;
-    --light-green: #92ac92;
-    --super-light-green: #d8e9d8;
-    --opaque-color: #cad7ca50;
-    --blue: #3b4bf9;
+    --link-visited: #234560;
+    --light-blue: #DAE3E6;
+    --sea-blue: #2F6D80;
+    --grey-blue: #5c7d9a;
+    --light-sand: #ece7e4;
+    --link-active: #3b4bf9;
 
     --standardfontweight: 400;
     --headingfontweight: 700;
@@ -75,11 +75,11 @@ p {
 }
 
 a {
-    color: var(--light-indigo);
+    color: var(--link);
 }
 
 a:visited {
-    color: var(--light-green);
+    color: var(--link-visited);
 }
 
 a:hover {
@@ -91,7 +91,7 @@ a:focus {
 }
 
 a:active {
-    color: var(--blue);
+    color: var(--link-active);
 }
 
 button,
@@ -106,7 +106,7 @@ button,
     font-size: var(--mainfontsize);
     text-align: center;
     background-color: var(--tertiary-color);
-    color: var(--buttonpink);
+    color: var(--link);
     text-decoration: none;
     padding: 10px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -121,23 +121,23 @@ button,
 }
 
 .secondary_button {
-    background-color: var(--buttonpink);
-    color: var(--light-green);
+    background-color: var(--ivory);
+    color: var(--sea-blue);
     width: var(--buttonw);
     margin: 5px;
 
 }
 
 .tertiary_button {
-    background-color: var(--button-violet);
-    color: var(--light-green);
+    background-color: var(--sand);
+    color: var(--sea-blue);
     width: var(--buttonw);
     margin: 5px;
 }
 
 .additional_button {
-    background-color: var(--dark-violet);
-    color: var(--light-green);
+    background-color: var(--dusty-rose);
+    color: var(--sea-blue);
     width: var(--buttonw);
     margin: 5px;
 }
@@ -177,7 +177,7 @@ ul {
 .navigation-list_item--active {
     display: inline-block;
     border: solid;
-    border-color: var(--dark-green);
+    border-color: var(--link-visited);
     border-radius: var(--standardbradius);
     width: 122px;
     margin: 7px;
@@ -188,13 +188,13 @@ table {
 }
 
 th {
-    background-color: var(--tertiary-color);
+    background-color: var(--grey-blue);
     color: var(--primary-color);
     padding: 10px;
 }
 
 tr:nth-child(even) {
-    background-color: var(--light-green);
+    background-color: var(--light-blue);
 }
 
 ul.list_centered {
@@ -228,7 +228,7 @@ ul.list_centered {
 }
 
 .page-header {
-    background: var(--super-light-green);
+    background: var(--grey-blue);
     box-shadow: 0 4px 6px rgba(34, 60, 80, .16);
     position: -webkit-sticky;
     position: sticky;
@@ -281,7 +281,7 @@ ul.list_centered {
     }
 
     .grid_item {
-        background-color: #cad7ca50;
+        background-color: var(--light-sand);
         width: auto;
         min-width: auto;
         margin: 0;
@@ -303,7 +303,7 @@ ul.list_centered {
     flex-direction: column;
     text-align: center;
     align-self: center;
-    background-color: var(--secondary-color);
+    background-color: var(--light-blue);
     list-style: none;
     border: var(--aboutborder);
     margin-left: 350px;
@@ -333,7 +333,7 @@ ul.list_centered {
     flex-flow: row wrap;
     margin-bottom: 50px;
     padding: 8px;
-    background-color: var(--super-light-green);
+    background-color: var(--light-blue);
     opacity: 2.5
 }
 
@@ -359,8 +359,8 @@ ul.list_centered {
 form.form_layout {
     display: table;
     padding: 20px;
-    border-color: var(--dark-violet);
-    background-color: var(--opaque-color);
+    border-color: var(--dusty-rose);
+    background-color: var(--light-sand);
     border-style: dotted;
 }
 
@@ -395,8 +395,8 @@ textarea {
     display: flex;
     width: auto;
     justify-content: center;
-    border: dotted var(--dark-violet);
-    background-color: var(--opaque-color);
+    border: dotted var(--dusty-rose);
+    background-color: var(--light-sand);
     margin-left: 200px;
     margin-right: 200px;
 }
