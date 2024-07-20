@@ -10,15 +10,15 @@ additional color (melon): f9b5ac;
  */
 :root {
     --primary-color: #E6E6FA;
-    --secondary-color: #412F4B;
-    --tertiary-color: indigo;
+    --secondary-color: #dfcce9c0;
+    --tertiary-color: rgba(70, 38, 93, 0.923);
     --light-indigo: #6f26a3;
-    --dark-violet: #2e0051;
-    --button-violet: #9370db;
-    --buttonpink: #d8bfd8;
+    --dark-violet: #654F6F;
+    --button-violet: #5C5D8D;
+    --buttonpink: #c6afc6;
     --dark-grey: #2b2b2b;
-    --dark-green: #3d4a3e;
-    --green: #637864;
+    --dark-green: #2b342b;
+    --green: #728973;
     --light-green: #92ac92;
     --super-light-green: #d8e9d8;
     --opaque-color: #cad7ca50;
@@ -38,9 +38,6 @@ additional color (melon): f9b5ac;
     --picbradius: 50% 50%;
     --aboutborder: dotted 3px #637864;
     --buttonw: 120px;
-
-
-
 
 }
 
@@ -82,7 +79,7 @@ a {
 }
 
 a:visited {
-    color: var(--green);
+    color: var(--light-green);
 }
 
 a:hover {
@@ -108,8 +105,8 @@ button,
     font-family: inherit;
     font-size: var(--mainfontsize);
     text-align: center;
-    background-color: var(--dark-violet);
-    color: var(--button-violet);
+    background-color: var(--tertiary-color);
+    color: var(--buttonpink);
     text-decoration: none;
     padding: 10px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -125,7 +122,7 @@ button,
 
 .secondary_button {
     background-color: var(--buttonpink);
-    color: var(--tertiary-color);
+    color: var(--light-green);
     width: var(--buttonw);
     margin: 5px;
 
@@ -133,14 +130,14 @@ button,
 
 .tertiary_button {
     background-color: var(--button-violet);
-    color: var(--dark-violet);
+    color: var(--light-green);
     width: var(--buttonw);
     margin: 5px;
 }
 
 .additional_button {
-    background-color: var(--light-green);
-    color: var(--tertiary-color);
+    background-color: var(--dark-violet);
+    color: var(--light-green);
     width: var(--buttonw);
     margin: 5px;
 }
@@ -164,7 +161,7 @@ button:focus,
 .button_form:hover,
 .button_form:focus {
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 ul {
@@ -262,7 +259,8 @@ ul.list_centered {
 }
 
 .page_logo {
-    border-radius: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(34, 60, 80, .16);
 }
 
 /* start grid fallback */
@@ -283,7 +281,7 @@ ul.list_centered {
     }
 
     .grid_item {
-        background-color: #d4d1d4;
+        background-color: #cad7ca50;
         width: auto;
         min-width: auto;
         margin: 0;
@@ -395,7 +393,7 @@ textarea {
 
 .container_contact {
     display: flex;
-    width: 100%auto;
+    width: auto;
     justify-content: center;
     border: dotted var(--dark-violet);
     background-color: var(--opaque-color);
@@ -433,9 +431,81 @@ textarea {
 }
 
 @media all and (max-width: 750px) {
+    main {
+        margin-top: 80px;
+    }
+
+    body {
+        line-height: var(--plineh);
+    }
+
+    .container_contact {
+        display: block;
+        width: 70%;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about,
+    .wrapper {
+        display: block;
+        width: 70%;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .container_table {
+        display: block;
+        width: auto;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .intro {
+        display: block;
+        width: 90%;
+        margin: 150px auto;
+        font-size: 14px;
+    }
+
+    .profile_portrait {
+        display: block;
+        width: auto;
+        margin-left: 30px;
+    }
+
+    .berlin-illustration {
+        width: 80%;
+        height: 80%;
+        margin: 0px auto;
+    }
+
     @media all and (max-width: 500px) {
         .grid {
             grid-template-columns: 1fr;
+        }
+
+        .page-header {
+            height: 13.5rem;
+        }
+
+        .page-header_item {
+            margin-top: 0px;
+        }
+
+        .main-navigation.responsive {
+            position: relative;
+        }
+
+        .main-navigation.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
         }
     }
 
@@ -460,6 +530,48 @@ textarea {
         }
     }
 }
+
+@media all and (min-width: 750px) and (max-width: 1110px) {
+    main {
+        margin-top: 70px;
+    }
+
+    .container_contact {
+        display: block;
+        width: 60%;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about {
+        display: block;
+        width: 70%;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container_table {
+        display: block;
+        width: auto;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+/* @media all and (max-width: 895px) {
+        .secondary_button,
+        .tertiary_button,
+        .additional_button,
+        .default_button {
+           max-width: 40%;
+           max-height: 40%;
+           font-size: 60%;
+        } */
+
 
 @keyframes color-change {
     0% {
