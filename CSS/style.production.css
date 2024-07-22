@@ -654,23 +654,28 @@ textarea {
         text-align: center;
         padding-bottom: 20px;
     }
-
+    .main_profile {
+        display: flex;
+        max-width: 100%;
+    }
     .intro {
-        display: block;
-        width: 90%;
-        margin: 150px auto;
+        flex:1;
+        max-width: 100%;
+        margin: 100px auto;
         font-size: 14px;
+        padding: 20;
     }
 
     .profile_portrait {
-        display: block;
-        width: auto;
+        display: flex;
+        max-width: auto;
         margin-left: 30px;
     }
 
     .berlin-illustration {
-        width: 80%;
-        height: 80%;
+        flex: 1;
+        max-width: 100%;
+        max-height: 80%;
         margin: 0px auto;
     }
 
@@ -757,6 +762,13 @@ textarea {
         text-align: center;
         padding-bottom: 20px;
     }
+    .berlin-illustration {
+        display: flex;
+        flex-shrink: 3;
+        max-width: 100%;
+        max-height: 80%;
+        margin: 0px auto;
+         }
 }
 
 @-webkit-keyframes color-change {
