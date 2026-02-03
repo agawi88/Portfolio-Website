@@ -4,26 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Agnieszka</title>
+
+    <!-- Bootstrap CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+>
+
     <link rel="icon" href="img/Logo_blue.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- CSS -->    
     <link rel="stylesheet" type="text/css" href="CSS/styles_var.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
 <body>
-    <header class="page-header">
-        <img src="img/blue_logo.png" alt="Logo" class="page-header_item page_logo">
-        <nav class="main-navigation page-header_item" role="menubar">
-            <a href="index.html" role="menuitem" class="button secondary_button navigation-list_item">Home</a>
-            <a href="about.html" role="menuitem"
-                class="tertiary_button navigation-list_item navigation-list_item--active">About</a>
-            <a href="my_work.html" role="menuitem" class="additional_button navigation-list_item">My Work</a>
-            <a href="contact.html" role="menuitem" class="default_button navigation-list_item">Contact</a>
-        </nav>
-    </header>
+<header class="page-header">
+
+ <!-- Bootstrap-Navbar with Image -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="img/blue_logo.png" alt="Logo" class="page_logo" style="height:80px;">   
+    </a>
+    <button 
+    class="navbar-toggler" 
+    type="button" 
+    data-bs-toggle="collapse" 
+    data-bs-target="#mainNavbar" 
+    aria-controls="mainNavbar" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" role="menuitem" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" role="menuitem" href="my_work.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" role="menuitem" href="contact.html">Contact</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>  
+<!-- End of Bootstrap-Navbar with Image -->
+
+</header>
     <main> 
     <div class="about">
         <div>   
@@ -91,7 +128,7 @@
             </tr>
             <tr>
                 <td>Translating</td>
-                <td>10</td>
+                <td>15+</td>
                 <td>Advanced</td>
             </tr>
 <!--             <tr>
@@ -121,5 +158,8 @@
             </div>
         </footer>
         <script src="js/tota11y.min.js"></script>
+    <!-- Bootstrap JS (optional, but needed for navbar, modals, etc.) -->
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" >
+</script>
 </body>
 </html>

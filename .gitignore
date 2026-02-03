@@ -1,0 +1,16 @@
+# Node
+/node_modules
+
+#dist
+/dist
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+# Environment files
+.env
+
+# Visual Studio Code
+.vscode/*
