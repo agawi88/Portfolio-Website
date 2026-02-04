@@ -50,6 +50,7 @@ body {
     font-weight: var(--standardfontweight);
     font-size: var(--mainfontsize);
     line-height: var(--standardlineh);
+        padding-top: 6rem;
 }
 
 /* ======================================================================
@@ -57,11 +58,10 @@ body {
    ====================================================================== */
 main {
     position: relative;
-    margin-top: 150px; /* reserve space for fixed header */
     margin-bottom: 70px;
 }
 /* ======================================================================
-   Typography (headings, paragraphs, links)
+   Typography (headings, paragraphs, buttons, links)
    ====================================================================== */
 
 h1 {
@@ -173,35 +173,48 @@ button:focus,
    Header
    ====================================================================== */
 
-.page-header {
-    background: var(--grey-blue);
-    box-shadow: var(--boxshadow);
-    position: -webkit-sticky; /* keep for broad support */
-    position: fixed; /* page header is fixed at the top */
+.header {
+    top: 0;
+    display: flex;
+    width: 100%;
+    padding: 20px 20px;
+    height: 6rem;  
+    align-items: center;
+}
+
+.navbar {
     top: 0;
     display: flex;
     width: 100%;
     padding: 20px 20px;
     height: 6rem;
-    justify-content: center;
     align-items: center;
-    z-index: 1030; /* put header above content */
+    z-index: 890; /* put header above content */
 }
 
-.page-header_item {
-    flex: 0 1 200px;
-    margin-top: 5px;
-    margin-left: 10px;
+.custom-navbar {
+    background-color: var(--grey-blue);
+    box-shadow: var(--boxshadow);
+      backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.page-header_item:last-child {
-    flex-grow: 1;
-    text-align: right;
+.container-fluid {
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand img {
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50%;
+    box-shadow: var(--boxshadow);
+    opacity: 1;
 }
 
 .page_logo {
-    border-radius: 50%;
-    box-shadow: var(--boxshadow);
+
 }
 
 /* ======================================================================
@@ -216,7 +229,7 @@ button:focus,
 }
 
 /* ======================================================================
-   Generic / Utilities (buttons, links, lists, tables)
+   Generic / Utilities ( lists, tables)
    ====================================================================== */
 
 ul {
@@ -237,66 +250,8 @@ th {
 tr:nth-child(even) {
     background-color: var(--light-blue);
 }
-
-.navigation-list li {
-    display: inline-block;
-    margin-left: 15px;
-}
-
-.navigation-list_item--active {
-    display: inline-block;
-    border: solid;
-    border-color: var(--link-visited);
-    border-radius: var(--standardbradius);
-    width: 122px;
-    margin: 7px;
-}
-
-button,
-.button_form,
-.CV_button,
-.default_button,
-.secondary_button,
-.tertiary_button,
-.additional_button {
-    border: none;
-    font-family: inherit;
-    font-size: var(--mainfontsize);
-    font-weight: 600;
-    text-align: center;
-    background-color: var(--tertiary-color);
-    color: var(--link);
-    text-decoration: none;
-    padding: 10px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    display: inline-block;
-    border-radius: var(--standardbradius);
-    transition: var(--standardtransition);
-}
-
-.default_button { width: 120px; margin: 5px; }
-.secondary_button { background-color: var(--ivory); color: var(--sea-blue); width: var(--buttonw); margin: 5px; }
-.tertiary_button { background-color: var(--sand); color: var(--sea-blue); width: var(--buttonw); margin: 5px; }
-.additional_button { background-color: var(--dusty-rose); color: var(--sea-blue); width: var(--buttonw); margin: 5px; }
-
-.button_form { margin-left: 80px; }
-
-button:hover,
-button:focus,
-.additional_button:hover,
-.additional_button:focus,
-.default_button:hover,
-.default_button:focus,
-.secondary_button:hover,
-.secondary_button:focus,
-.tertiary_button:hover,
-.tertiary_button:focus,
-.CV_button:hover,
-.CV_button:focus,
-.button_form:hover,
-.button_form:focus {
-    cursor: pointer;
-    opacity: 0.8;
+tr:nth-child(odd) {
+    background-color: var(--ivory);
 }
 
 .ul.list_centered { display: inline-block; text-align: left; }
@@ -414,8 +369,8 @@ button:focus,
 
     @media all and (max-width: 500px) {
         .grid { grid-template-columns: 1fr; }
-        .page-header { height: 13.5rem; }
-        .page-header_item { margin-top: 0px; }
+        .header { height: 13.5rem; }
+        .header_item { margin-top: 0px; }
         .main-navigation.responsive { position: relative; }
         .main-navigation.responsive a.icon { position: absolute; right: 0; top: 0; }
     }
