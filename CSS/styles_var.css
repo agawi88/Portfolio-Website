@@ -10,7 +10,7 @@
     --link-visited: #234560;
     --light-blue: #DAE3E6;
     --sea-blue: #2F6D80;
-    --grey-blue: rgb(92, 125, 154);
+    --grey-blue: #5c7d9a;
     --light-sand: #ece7e4;
     --link-active: #3b4bf9;
 
@@ -30,7 +30,7 @@
     --aboutborder: solid 2px #CCAFA5;
     --buttonw: 120px;
     --boxshadow: 0 4px 6px #223c5075;
-    --navbar-height: 6rem;
+    --navbarheight: 6rem;
 
 
 }
@@ -51,7 +51,7 @@ body {
     font-weight: var(--standardfontweight);
     font-size: var(--mainfontsize);
     line-height: var(--standardlineh);
-    padding-top: var(--navbar-height);
+    padding-top: var(--navbarheight);
 }
 
 /* ======================================================================
@@ -179,20 +179,14 @@ button:focus,
     display: flex;
     width: 100%;
     padding: 20px 20px;
-    height: 6rem;  
     align-items: center;
-}
-
-.page-header {
-  min-height: 96px; /* same height as navbar */
 }
 
 .navbar {
     top: 0;
     display: flex;
     width: 100%;
-    padding: 20px 20px;
-    height: var(--navbar-height);
+    padding: 5px 7px;
     align-items: center;
     z-index: 890; /* put header above content */
 }
@@ -209,15 +203,9 @@ button:focus,
 }
 
 .navbar-brand img {
-    height: 90px;
-    display: flex;
-    justify-content: flex-start;
+    height: 100px;
     border-radius: 50%;
     box-shadow: var(--boxshadow);
-}
-
-.page_logo {
-
 }
 
 .nav-link.active {
@@ -375,23 +363,25 @@ tr:nth-child(odd) {
     .intro { display: block; width: 90%; margin: 150px auto; font-size: 14px; }
     .profile_portrait { display: block; width: auto; margin-left: 30px; }
     .berlin-illustration { width: 80%; height: 80%; margin: 0px auto; }
-
-    @media all and (max-width: 500px) {
-        .grid { grid-template-columns: 1fr; }
-        .header { height: 13.5rem; }
-        .header_item { margin-top: 0px; }
-        .main-navigation.responsive { position: relative; }
-        .main-navigation.responsive a.icon { position: absolute; right: 0; top: 0; }
-    }
-
-    @media all and (min-width: 500px) and (max-width: 750px) {
-        .grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media all and (max-width: 750px) {
         .grid { grid-gap: 10px; }
         .grid_item:last-child { grid-column: auto / auto; grid-row: auto / auto; }
         h1 { font-size: var(--mediafontsize); }
+}
+@media all and (max-width: 500px) {
+    .grid { grid-template-columns: 1fr; }
+    .custom-navbar { margin-top: 0px;
+                     align-items: center;  }
+    }
+@media all and (min-width: 100px) and (max-width: 996px) {
+        .header { display: flex; 
+                  align-content: center;
+                  align-items: center; }
+        .custom-navbar { 
+            align-content: center; 
+        }    
+
+    @media all and (min-width: 500px) and (max-width: 750px) {
+        .grid { grid-template-columns: 1fr 1fr; }
     }
 }
 
