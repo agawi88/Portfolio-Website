@@ -354,6 +354,25 @@ ul.list_centered {
     margin-top: 15px;
     margin-right: 10px;
 }
+.custom-navbar .page-header_item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 200px;
+    flex: 0 1 200px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.custom-navbar .page-header_item:last-child {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.custom-navbar .page-header_item {
+    margin-top: 15px;
+    margin-right: 10px;
+}
 
 .page_logo {
     border-radius: 50%;

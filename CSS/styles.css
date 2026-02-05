@@ -466,15 +466,14 @@ textarea {
             height: 13.5rem;
         }
 
-        .page-header_item {
+        /* scope legacy rules to the new navbar class */
+        .custom-navbar {
             margin-top: 0px;
-        }
-
-        .main-navigation.responsive {
             position: relative;
         }
 
-        .main-navigation.responsive a.icon {
+
+        .custom-navbar.responsive a.icon {
             position: absolute;
             right: 0;
             top: 0;
