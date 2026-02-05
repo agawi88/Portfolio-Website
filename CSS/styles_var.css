@@ -10,7 +10,7 @@
     --link-visited: #234560;
     --light-blue: #DAE3E6;
     --sea-blue: #2F6D80;
-    --grey-blue: #5c7d9a;
+    --grey-blue: rgb(92, 125, 154);
     --light-sand: #ece7e4;
     --link-active: #3b4bf9;
 
@@ -30,6 +30,7 @@
     --aboutborder: solid 2px #CCAFA5;
     --buttonw: 120px;
     --boxshadow: 0 4px 6px #223c5075;
+    --navbar-height: 6rem;
 
 
 }
@@ -50,7 +51,7 @@ body {
     font-weight: var(--standardfontweight);
     font-size: var(--mainfontsize);
     line-height: var(--standardlineh);
-        padding-top: 6rem;
+    padding-top: var(--navbar-height);
 }
 
 /* ======================================================================
@@ -182,21 +183,24 @@ button:focus,
     align-items: center;
 }
 
+.page-header {
+  min-height: 96px; /* same height as navbar */
+}
+
 .navbar {
     top: 0;
     display: flex;
     width: 100%;
     padding: 20px 20px;
-    height: 6rem;
+    height: var(--navbar-height);
     align-items: center;
     z-index: 890; /* put header above content */
 }
 
 .custom-navbar {
-    background-color: var(--grey-blue);
+    background-color: rgba(92, 125, 154, 0.85);
     box-shadow: var(--boxshadow);
-      backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .container-fluid {
@@ -210,12 +214,17 @@ button:focus,
     justify-content: flex-start;
     border-radius: 50%;
     box-shadow: var(--boxshadow);
-    opacity: 1;
 }
 
 .page_logo {
 
 }
+
+.nav-link.active {
+  font-weight: 600;
+  color: var(--link-active);
+}
+
 
 /* ======================================================================
    Footer
