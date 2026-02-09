@@ -321,6 +321,28 @@ tr:nth-child(odd) {
 /* ======================================================================
    my_work page (projects grid)
    ====================================================================== */
+/* grid fallback */
+/*     .grid_item { display: inline-block; width: 33%; }
+ */
+@supports (display: grid) {
+    .grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-gap: 20px;
+        grid-auto-rows: 1fr;
+    }
+    .grid_item { 
+        display: flex;
+        flex-direction: column;
+        background-color: var(--light-sand); 
+        margin: 0; 
+     }
+    .grid_item:nth-child(5) { 
+        grid-column-start: 3; 
+        grid-column-end: 3; 
+        grid-row-start: 1; 
+        grid-row-end: 3; }
+}
 
 .page_content { 
     max-width: 1200px;
@@ -371,35 +393,47 @@ tr:nth-child(odd) {
     background-color: var(--light-sand);
 }
 
-/* grid fallback */
-/*     .grid_item { display: inline-block; width: 33%; }
- */
-@supports (display: grid) {
-    .grid { 
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-gap: 20px;
-        grid-auto-rows: 1fr;
-    }
-    .grid_item { 
-        display: flex;
-        flex-direction: column;
-        background-color: var(--light-sand); 
-        margin: 0; 
-     }
-    .grid_item:nth-child(5) { 
-        grid-column-start: 3; 
-        grid-column-end: 3; 
-        grid-row-start: 1; 
-        grid-row-end: 3; }
+/* MODAL */
+
+.custom-modal {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: var(--light-sand);
+}
+.custom-modal-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
 }
 
-/* MODAL */
+.modal_image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
 .modal_image { 
-    width: 50%; 
-    height: auto; 
-    border-radius: var(--standardbradius); 
-    margin-bottom: 20px; 
+    width: 100%;
+    height: fit-content;
+}
+
+.custom-modal-text p {
+    padding: 20px;
+    background-color: var(--light-sand);
+    width: 100%;
+    margin: 0;
 }
 
 /* ======================================================================
