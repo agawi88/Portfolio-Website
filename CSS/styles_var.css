@@ -283,14 +283,7 @@ tr:nth-child(odd) {
     margin: 30px auto 50px;
 }
 
-/* grid fallback */
-.grid_item { display: inline-block; width: 33%; }
 
-@supports (display: grid) {
-    .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 20px; margin: 0; }
-    .grid_item { background-color: var(--light-sand); width: auto; min-width: auto; margin: 0; padding: 30px; }
-    .grid_item:last-child { grid-column-start: 3; grid-column-end: 3; grid-row-start: 1; grid-row-end: 3; }
-}
 
 /* ======================================================================
    About page
@@ -326,10 +319,88 @@ tr:nth-child(odd) {
 /* .intro {  small adjustments used in responsive } */  
 
 /* ======================================================================
-   my_works page (projects grid)
+   my_work page (projects grid)
    ====================================================================== */
 
-/* .grid and .grid_item are defined above in Home section because they are shared */
+.page_content { 
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* CARDS */
+
+.custom_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1fr;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+.card-img-top {
+    width: 100%;
+    height: fit-content;
+}
+
+.custom-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100px;
+}
+
+.card-title {
+    font-size: var(--htwofontsize);
+    font-weight: var(--headingfontweight);
+    text-align: center;
+    align-content: center;
+    line-height: 1.3;
+    min-height: 2.6em;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem 1rem;
+    border-top: none;
+    background-color: var(--light-sand);
+}
+
+/* grid fallback */
+/*     .grid_item { display: inline-block; width: 33%; }
+ */
+@supports (display: grid) {
+    .grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-gap: 20px;
+        grid-auto-rows: 1fr;
+    }
+    .grid_item { 
+        display: flex;
+        flex-direction: column;
+        background-color: var(--light-sand); 
+        margin: 0; 
+     }
+    .grid_item:nth-child(5) { 
+        grid-column-start: 3; 
+        grid-column-end: 3; 
+        grid-row-start: 1; 
+        grid-row-end: 3; }
+}
+
+/* MODAL */
+.modal_image { 
+    width: 50%; 
+    height: auto; 
+    border-radius: var(--standardbradius); 
+    margin-bottom: 20px; 
+}
 
 /* ======================================================================
    Contact page
