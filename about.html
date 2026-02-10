@@ -23,22 +23,97 @@
 </head>
 <body>
 <header id="page-header" class="page-header"></header>
-    <main> 
-    <div class="about">
-        <div>   
-        <h1>About me</h1>
-        <p>Hi there! Want to get to know me? This is what I enjoy doing:</p>
-        </div>
-        <div>
-        <ul>
-            <li>Frontend development</li>
-            <li>Translating into and from English</li>
-            <li>Arts and Crafts</li>
-            <li>Deepening knowledge about the Montessori Education Method</li>
-        </ul>
-        </div>
-    </div>    
-    <div class="wrapper">
+
+<main class="main_grid_container">     
+<div class="about_grid_container main_first_part">
+    <div class="about_grid_title">   
+        <p>Want to know more <span><b>ABOUT ME</b></span>? This is what I enjoy doing:</p>
+    </div>
+    <ul class="about_grid_list">
+            <li class="d-inline-flex gap-1">
+                <button class="btn secondary_button about_grid_item rounded-circle" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#collapseExample" 
+                aria-expanded="false" 
+                aria-controls="collapseExample">
+                    Full-Stack development
+                </button>
+            </li>
+            <li class="d-inline-flex gap-1">
+                <button class="btn secondary_button about_grid_item rounded-circle" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#collapseTwo" 
+                aria-expanded="false" 
+                aria-controls="collapseTwo">
+                    Translating into and from English
+                </button>
+            </li>
+            <li class="d-inline-flex gap-1">
+                <button class="btn secondary_button about_grid_item rounded-circle" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#collapseThree" 
+                aria-expanded="false" 
+                aria-controls="collapseThree">
+                    Arts and Crafts
+                </button>
+            </li>
+            <li class="d-inline-flex gap-1">
+                <button class="btn secondary_button about_grid_item rounded-circle" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#collapseFour" 
+                aria-expanded="false" 
+                aria-controls="collapseFour">
+                    Deepening knowledge about the Montessori Education Method
+                </button>
+            </li>
+    </ul>
+</div> 
+
+<!--OFFCANVAS CONTENT FOR BUTTONS-->
+
+<section>
+<!-- First Button -->
+<div class="collapse" id="collapseOne">
+  <div class="card card-body">
+        <h3>My path to web development?</h3>
+        <p>It all started with a beginners' course back in 2021. That little insight into the world of code inspired me enough to pursue this path a few years later. At the moment I am about to finish my course in Full-Stuck Development with CareerFoundry and my interest for this branch hasn't waivered even when "fighting battles" with neverending errors. For me coding is a perfect fusion of creativity, love for languages and last but not least for detail. It gives me what translating has never manage to. I enjoy finding solutions to coding errors and little riddles that crop up in the process.  These challanges don't make want to give up, exactly the opposite, I cannot stop until I find a solution. And seeing the results of my work bring an insane joy and create happyendorfines. Having a creative soul, I was convinced that I will definitely stick only to the front-end, but working with and creating my own databases with MongoDB and SQL, turned out equally compelling. Also, to my mentor's surprise I trully enjoyed building applications with Angular framework and constructing React Native apps.<br>
+        </p>
+  </div>
+</div>
+<!-- Second Button -->
+<div class="collapse" id="collapseTwo">
+  <div class="card card-body">
+        <h3>How I learned Translating</h3>
+        <p>It all started with a deep passion for languages (EN, DE and PL). I finished BA in Teaching Enlish and German as a foreign Language and went on to do my MA in English and American studies.<br>
+        Years later I took a course for a certified translator and since then I translate whenever I can. Since then I've been on and off translating documents and texts (cultural, legal and administrative, medical) various language combinations. Although my favourite language combination was and remains DE/ENG</p>
+  </div>
+</div>
+<!-- Third Button -->
+<div class="collapse" id="collapseThree">
+  <div class="card card-body">
+        <h3>Arts and Crafts</h3>
+        <p>
+            Although I'm not an artist, not even close, my creative side loves to express itself through various arts and crafts activities and tiny engineering projects. From painting, drawing, knitting, DIY home decor projects, cooking or gardening - I have always loved it and needed that creative outlet in my life! They help me to relax and unwind after a long day of work or study and connect with my family, as I'm also very eager to teach my kids new skills and explore new activities together.
+        </p>
+  </div>
+</div>
+<!-- Fourth Button -->
+<div class="collapse" id="collapseFour">
+  <div class="card card-body">
+        <h3>How I became a fan of Montessori educational method?</h3>
+        <p>
+            Education has been close to my heart already since childhood. I have always enjoyed learning new things and sharing sharing my knowledge with others. Nevetheless the educational system I grew up with was very traditional and teacher-centred. My teacher's training was an life-changing eye-opener on all the existing methods. But it was only after becoming a mother myself that I exploring the alternative educational methods and became trully conviced and inspired discovered Montessori. 
+            I was fascinated by the child-centred approach, the emphasis on independence, freedom within limits, and respect for a child's natural psychological development. Since then I've been continously deepening my knowledge of the Montessori method, applying these principles in my own parenting journey.
+        </p>
+  </div>
+</div>  
+</section>
+    
+   <!--  <div class="wrapper">
         <div class="first_part">
         <h2>My path to web development?</h2>
         <p>It all started with a beginners' course back in 2021. That little insight into the world of code inspired me enough to pursue this path a few years later. At the moment I am about to finish my course in Full-Stuck Development with CareerFoundry and my interest for this branch hasn't waivered even when "fighting battles" with neverending errors. For me coding is a perfect fusion of creativity, love for languages and last but not least for detail. It gives me what translating has never manage to. I enjoy finding solutions to coding errors and little riddles that crop up in the process.  These challanges don't make want to give up, exactly the opposite, I cannot stop until I find a solution. And seeing the results of my work bring an insane joy and create happyendorfines. Having a creative soul, I was convinced that I will definitely stick only to the front-end, but working with and creating my own databases with MongoDB and SQL, turned out equally compelling. Also, to my mentor's surprise I trully enjoyed building applications with Angular framework and constructing React Native apps.<br>
@@ -62,8 +137,11 @@
             I was fascinated by the child-centred approach, the emphasis on independence, freedom within limits, and respect for a child's natural psychological development. Since then I've been continously deepening my knowledge of the Montessori method, applying these principles in my own parenting journey.
         </p>
         </div>
-    </div>
-        <div class="container">
+    </div> -->
+
+
+<!-- SKILLS TABLE -->
+        <div class="container main_second_part">
         <table class="container_table">
           <thead>  
              <tr>
@@ -101,9 +179,9 @@
             
           </tbody> 
         </table>
-            <div>
-                <a href="files/cv.pdf" class="CV_button" download>Download my CV</a>
-            </div>
+        </div>
+        <div class="main_third_part">
+            <a href="files/cv.pdf" class="CV_button" download>Download my CV</a>
         </div>
     </main>
     
