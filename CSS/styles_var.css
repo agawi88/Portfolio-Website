@@ -59,6 +59,9 @@ body {
    ====================================================================== */
 main {
     position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 150px;
     margin-bottom: 70px;
 }
 /* ======================================================================
@@ -326,23 +329,39 @@ tr:nth-child(odd) {
 /* ======================================================================
    About page
    ====================================================================== */
-
-.about {
-    clear: both;
-    display: flex;
-    width: auto;
-    flex-direction: column;
-    text-align: center;
-    align-self: center;
-    background-color: var(--light-blue);
-    list-style: none;
-    border: none;
-    margin-left: 350px;
-    margin-right: 350px;
-    margin-bottom: 40px;
+/* MAIN GRID */
+.main_grid_container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100% 100% 100%;
+    align-items: stretch;
+    justify-items: center;
+    gap: 20px;
 }
 
-.about div:last-child { text-align: center; justify-content: center; }
+
+/* ABOUT GRID */
+.about_grid_container {
+    display: grid;
+    grid-auto-rows: 4rem 10rem;
+    align-items: stretch;
+    justify-items: center;
+    gap: 10px;
+}
+
+.about_grid_list {
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem;    
+    justify-items: center;
+    gap: 20px;
+}
+
+.about_grid_list button {
+    width: 15rem;
+    height: 15rem;
+    text-align: center;
+}
+
 
 .wrapper { display: flex; width: 100%; flex-direction: row; }
 
