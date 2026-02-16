@@ -34,7 +34,7 @@
         <div class="profile_grid_item">
             <img src="img/aga_profile_img.JPG" class="profile_portrait" alt="Agnieszk's Portrait">
         </div>
-    <div class="intro profile_grid_item">
+<div class="intro profile_grid_item">
 <h1>Hi, I’m Agnieszka.</h1>
 <p>
 Full-Stack Developer with a background in languages and education.
@@ -56,12 +56,20 @@ Curious what I’ve built?
 </div>
 <!-- END OF INFO GRID -->
 
-<!-- SKILLS GRID -->
-<section class="tech-stack main_profile_second_part">
-  <h2>Languages I Speak (in code)</h2>
 
-<div class="col tech-grid">
-  <div class="row">
+<section class="tech-stack main_profile_second_part">
+ <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">MY TECH-STACK</button>
+ <!-- SKILLS GRID -->
+<!--OFFCANVAS STARTS HERE-->
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+<!-- OFFCANVAS HEADER--> 
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Languages I Speak (in code)</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+<!-- OFFCANVAS BODY -->  
+ <div class="col tech-grid offcanvas-body small">
+    <div class="row">
     <div class="card tech-card">
       <div class="card-header">Frontend</div>  
       <div class="card-body">
@@ -102,8 +110,8 @@ Curious what I’ve built?
       </div>
     </div>
   </div>
-  <div class="row middle-line">
-    <div class="card tech-card second_card col-6">
+  <div class="middle-line">
+    <div class="card tech-card">
       <div class="card-header">Backend</div>  
       <div class="card-body">
         <ul class="tech-icons row">
@@ -118,7 +126,7 @@ Curious what I’ve built?
         </ul>
       </div>
     </div>
-    <div class="card tech-card third_card col-6">
+    <div class="card tech-card">
       <div class="card-header">Databases & Data</div>  
       <div class="card-body">
         <ul class="tech-icons row">
@@ -171,6 +179,8 @@ Curious what I’ve built?
       </div>
     </div>
   </div>
+</div>
+<!--OFFCANVAS END HERE-->
 </div>
 </section>
 <!-- END OF SKILLS GRID -->
