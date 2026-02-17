@@ -262,34 +262,6 @@ button:focus,
 }
 
 /* ======================================================================
-   Generic / Utilities ( lists, tables)
-   ====================================================================== */
-
-ul {
-    font-weight: bold;
-    list-style-type: none;
-}
-
-table {
-    width: 60%;
-}
-
-th {
-    background-color: var(--grey-blue);
-    color: var(--primary-color);
-    padding: 10px;
-}
-
-tr:nth-child(even) {
-    background-color: var(--light-blue);
-}
-tr:nth-child(odd) {
-    background-color: var(--ivory);
-}
-
-.ul.list_centered { display: inline-block; text-align: left; }
-
-/* ======================================================================
    Home page (main profile / hero / grid styles)
    ====================================================================== */
 
