@@ -353,6 +353,7 @@ button:focus,
 .tech-icons li {
   text-align: center;
   justify-items: center;
+  list-style: none;
 }
 
 .tech-icons img {
