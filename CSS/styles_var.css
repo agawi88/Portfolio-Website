@@ -244,11 +244,20 @@ button:focus,
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: space-evenly;
 }
 
 .social_media img {
     width: 40px;
     height: 40px;
+    margin-right: 20px;
+}
+
+.social_media p {
+    font-size: 20px;
+}
+.page_footer p {
+    margin: 16px auto;
 }
 
 /* ======================================================================
@@ -380,6 +389,14 @@ tr:nth-child(odd) {
   max-height: 1rem;  
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
+}
+
+.offcanvas-bottom {
+  --bs-offcanvas-height: 75vh;
+}
+
+.offcanvas-body {
+  overflow-y: auto;
 }
 
 
@@ -599,6 +616,9 @@ tr:nth-child(odd) {
     .about, .wrapper { display: block; width: 70%; margin: auto; justify-content: center; text-align: center; font-size: 13px; }
     .container_table { display: block; width: auto; margin: auto; justify-content: center; text-align: center; padding-bottom: 20px; }
     .grid_container {grid-template-columns: 1fr; grid-template-rows: max-content;}
+    .offcanvas-bottom {
+    --bs-offcanvas-height: 90vh;
+  }
 /*     .intro { display: block; width: 90%; margin: 150px auto; font-size: 14px; }
     .profile_portrait { display: block; width: auto; margin-left: 30px; }
         .grid_item:last-child { grid-column: auto / auto; grid-row: auto / auto; }
