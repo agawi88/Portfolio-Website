@@ -30,7 +30,7 @@
     --aboutborder: solid 2px #CCAFA5;
     --buttonw: 120px;
     --boxshadow: 0 4px 6px #223c5075;
-    --navbarheight: 6rem;
+    --navbarheight: 10rem;
 
 
 }
@@ -62,7 +62,7 @@ main {
     position: relative;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 150px;
+    margin-top: 20px;
     margin-bottom: 70px;
 }
 /* ======================================================================
@@ -577,7 +577,6 @@ button:focus,
    ====================================================================== */
 
 @media all and (max-width: 750px) {
-    main { margin-top: 80px; }
     body { line-height: var(--plineh); }
     .container_contact { display: block; width: 70%; margin: auto; justify-content: center; text-align: center; }
     .about, .wrapper { display: block; width: 70%; margin: auto; justify-content: center; text-align: center; font-size: 13px; }
@@ -625,7 +624,6 @@ button:focus,
 }
 
 @media all and (min-width: 750px) and (max-width: 1110px) {
-    .main { margin-top: 70px; }  
 }
 
 @keyframes color-change { 0% { fill: #edc655; } 50% { fill: #fcffad; } 100% { fill: #bf683a; } }
