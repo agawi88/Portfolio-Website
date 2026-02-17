@@ -450,26 +450,26 @@ button:focus,
 /*     .grid_item { display: inline-block; width: 33%; }
  */
 @supports (display: grid) {
-    .grid { 
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        grid-gap: 20px;
-    }
-    .grid_item { 
-        display: flex;
-        flex-direction: column;
-        background-color: var(--light-sand); 
-        margin: 0; 
-     }
-    .grid_item:nth-child(5) { 
-        grid-column-start: 3; 
-        grid-column-end: 3; 
-        grid-row-start: 1; 
-        grid-row-end: 3; }
-}
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    grid-auto-rows: auto;
+    transition: all .25s ease;
+    grid-auto-flow: dense;
+  }
 
-.grid_item.no-image .custom-card-body {
-  min-height: 60px;
+  .grid_item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-sand);
+  }
+
+  /* ChatApp featured card */
+  .grid_item.featured {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
 }
 
 
@@ -478,6 +478,7 @@ button:focus,
     margin: 50px auto;
     padding: 0 20px;
 }
+
 
 /* CARDS */
 
@@ -503,7 +504,7 @@ button:focus,
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 100px;
+    flex-grow: 1;
 }
 
 .card-title {
@@ -522,6 +523,12 @@ button:focus,
     border-top: none;
     background-color: var(--light-sand);
 }
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
 
 /* MODAL */
 
@@ -580,10 +587,19 @@ button:focus,
     --bs-offcanvas-height: 90vh;
   }
 }
+/* MOBILE LAYOUT */
 @media all and (max-width: 500px) {
-    .grid { grid-template-columns: 1fr; }
     .custom-navbar { margin-top: 0px;
                      align-items: center;  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid_item.featured {
+    grid-column: auto;
+    grid-row: auto;
+  }                     
     }
 @media all and (min-width: 100px) and (max-width: 996px) {
         .header { display: flex; 
@@ -595,17 +611,21 @@ button:focus,
         .grid_container {grid-template-columns: 1fr; grid-template-rows: max-content;}
         .berlin-svg { align-items: stretch; }
 }
+/* TABLET LAYOUT */
+@media (max-width: 749px) and (min-width: 500px) {
 
-@media all and (min-width: 500px) and (max-width: 750px) {
-        .grid { grid-template-columns: 1fr 1fr; }
-    }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid_item.featured {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
 
 @media all and (min-width: 750px) and (max-width: 1110px) {
-    .main { margin-top: 70px; }
-    .grid_item:nth-child(5) {
-    grid-column: 3;
-    grid-row: span 2;
-  }
+    .main { margin-top: 70px; }  
 }
 
 @keyframes color-change { 0% { fill: #edc655; } 50% { fill: #fcffad; } 100% { fill: #bf683a; } }
