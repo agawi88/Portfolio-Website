@@ -586,15 +586,7 @@ button:focus,
    ====================================================================== */
 
 @media all and (max-width: 750px) {
-    body { line-height: var(--plineh); }
-  .grid_container {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-    .intro {
-    grid-column: 1 / -1;
-    text-align: center;
-  }    
+    body { line-height: var(--plineh); }   
     .offcanvas-bottom { --bs-offcanvas-height: 90vh;}
   .profile_grid_item {
     justify-content: center;
