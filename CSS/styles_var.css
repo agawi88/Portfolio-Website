@@ -381,6 +381,8 @@ button:focus,
 
 .tech-stack button {
   justify-self: center;
+  width: auto;
+  padding: 12px 32px;
 }
 
 
