@@ -246,6 +246,11 @@ button:focus,
     text-align: center;
 }
 
+.social_media img {
+    width: 40px;
+    height: 40px;
+}
+
 /* ======================================================================
    Generic / Utilities ( lists, tables)
    ====================================================================== */
