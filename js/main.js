@@ -4,11 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
         document.getElementById("page-header").innerHTML = data;
         setActiveLink();
-    });
+    })
+    .catch(error => console.error("Navbar failed to load:", error));
 });
 
 function setActiveLink() {
     const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "") {
+        currentPage = "index.html";
+    }
 
     const navLinks = document.querySelectorAll(".nav-link");
 
