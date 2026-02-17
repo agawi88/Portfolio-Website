@@ -45,7 +45,8 @@
    ====================================================================== */
 
 body {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background-color: var(--light-sand);
     color: var(--dark-grey);
     font-family: var(--mainfont);
     font-weight: var(--standardfontweight);
@@ -409,6 +410,7 @@ tr:nth-child(odd) {
     display: grid;
     grid-template-columns: 100%;
     align-content: center;
+    background-color: var(--light-sand);
 }
 .main_first_part {
     display: flex;
@@ -444,6 +446,7 @@ tr:nth-child(odd) {
     align-items: center;
     border: none;
     background-color: var(--light-sand);
+    color: #234560;
     padding: 20px;
     width: 100%;
 }
