@@ -131,8 +131,8 @@ button,
 }
 
 .secondary_button {
-    background-color: var(--ivory);
-    color: var(--sea-blue);
+    background-color: var(--grey-blue);
+    color: var(--ivory);
     width: var(--buttonw);
     margin: 5px;
 
@@ -314,13 +314,17 @@ button:focus,
 }
 
 .profile_portrait {
+  width: 100%;
   max-width: 260px;
+  margin: 0 auto;
+  display: block;
 }
 
 /* SKILLS GRID */
 .tech-stack {
     display: grid;
     gap: 20px;
+    justify-items: center;
 }
 .tech-grid {    
     display: grid;
@@ -374,6 +378,9 @@ button:focus,
   overflow-y: auto;
 }
 
+.tech-stack button {
+  justify-self: center;
+}
 
 
 /* ======================================================================
@@ -590,6 +597,8 @@ button:focus,
   }    
     .offcanvas-bottom { --bs-offcanvas-height: 90vh;}
   .profile_grid_item {
+    justify-content: center;
+    align-content: center;
     padding: 10px;
   }
 
@@ -633,6 +642,8 @@ button:focus,
 
   .profile_grid_item:nth-child(1) {
     grid-area: portrait;
+    justify-content: center;
+    align-content: center;
   }
 
   .intro {
