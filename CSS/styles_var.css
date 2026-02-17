@@ -480,9 +480,8 @@ tr:nth-child(odd) {
 @supports (display: grid) {
     .grid { 
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         grid-gap: 20px;
-        grid-auto-rows: 1fr;
     }
     .grid_item { 
         display: flex;
@@ -509,7 +508,7 @@ tr:nth-child(odd) {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1fr;
+    width: 100%;
     margin: 0;
     padding: 0;
     object-fit: cover;
@@ -517,7 +516,8 @@ tr:nth-child(odd) {
 
 .card-img-top {
     width: 100%;
-    height: fit-content;
+    height: auto;
+    display: block;
 }
 
 .custom-card-body {
@@ -589,24 +589,6 @@ tr:nth-child(odd) {
     margin: 0;
 }
 
-/* ======================================================================
-   Contact page
-   ====================================================================== */
-
-.container_contact {
-    display: flex; width: auto; justify-content: center; border: none; background-color: var(--light-sand);
-    margin-left: 200px; margin-right: 200px;
-}
-
-.container_contact div {
-    display: flex; flex-direction: column; border: none; flex-basis: auto;
-    justify-content: center; align-items: center; margin-top: 1px; margin-bottom: 1px;
-}
-
-.contact_details { display: flex; flex-direction: column; }
-
-.contact_img { display: flex; flex-direction: row; place-content: start; }
-
 
 /* ======================================================================
    Media queries and Utility Keyframes
@@ -622,10 +604,6 @@ tr:nth-child(odd) {
     .offcanvas-bottom {
     --bs-offcanvas-height: 90vh;
   }
-/*     .intro { display: block; width: 90%; margin: 150px auto; font-size: 14px; }
-    .profile_portrait { display: block; width: auto; margin-left: 30px; }
-        .grid_item:last-child { grid-column: auto / auto; grid-row: auto / auto; }
-        h1 { font-size: var(--mediafontsize); } */
 }
 @media all and (max-width: 500px) {
     .grid { grid-template-columns: 1fr; }
@@ -641,17 +619,18 @@ tr:nth-child(odd) {
         }
         .grid_container {grid-template-columns: 1fr; grid-template-rows: max-content;}
         .berlin-svg { align-items: stretch; }
-
-    @media all and (min-width: 500px) and (max-width: 750px) {
-        .grid { grid-template-columns: 1fr 1fr; }
-    }
 }
 
+@media all and (min-width: 500px) and (max-width: 750px) {
+        .grid { grid-template-columns: 1fr 1fr; }
+    }
+
 @media all and (min-width: 750px) and (max-width: 1110px) {
-    main { margin-top: 70px; }
-    .container_contact { display: block; width: 60%; margin: auto; justify-content: center; text-align: center; }
-    .about { display: block; width: 70%; margin: auto; justify-content: center; text-align: center; }
-    .container_table { display: block; width: auto; margin: auto; justify-content: center; text-align: center; padding-bottom: 20px; }
+    .main { margin-top: 70px; }
+    .grid_item:nth-child(5) {
+    grid-column: 3;
+    grid-row: span 2;
+  }
 }
 
 @keyframes color-change { 0% { fill: #edc655; } 50% { fill: #fcffad; } 100% { fill: #bf683a; } }
