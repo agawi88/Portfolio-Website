@@ -296,13 +296,16 @@ button:focus,
 .intro {
     font-size: var(--mainfontsize);
     font-weight: var(--headingfontweight);
-    text-align: start;
-    align-content: center;
+    text-align: justify;
     line-height: 1.3;
     padding: 0px 20px;
 }
 .intro h1 {
     text-align: center;
+}
+
+.intro p {
+    text-align: justify;
 }
 
 .profile_portrait, 
