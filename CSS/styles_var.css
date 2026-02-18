@@ -382,7 +382,7 @@ button:focus,
   overflow-y: auto;
 }
 
-.tech-stack button {
+.stack-button {
   justify-self: center;
   width: auto;
   padding: 12px 32px;
